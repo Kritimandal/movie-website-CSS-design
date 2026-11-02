@@ -1,0 +1,12 @@
+{
+  "name": "kdrama-catalog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "K-drama catalog with search, genre filters, watchlist and ratings in plain JavaScript",
+  "scripts": {
+    "test": "node --test tests/"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

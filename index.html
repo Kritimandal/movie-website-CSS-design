@@ -1,236 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kdrama Fan page</title>
-    <link rel="stylesheet" href="CSS/cstyle.css" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/450075fb16.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>K-Drama Catalog</title>
+  <meta name="description" content="Browse K-dramas, filter by genre, keep a watchlist and rate what you have watched.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e11d48'/%3E%3Cpath d='M24 18v28l22-14z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    try {
+      const theme = localStorage.getItem('kdrama-catalog-theme');
+      if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+    } catch {}
+  </script>
 </head>
-<body onLoad="currentdate()">
-   <header>
-       <div class="topbar">
-        <p id="datep">Date:</p>
-       </div>
-           <nav>
-                <li class="logo"><img src="images/logo.jpg" alt="logo" width="45px"></li>
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Hot Gossips</a></li>
-                <li><a href="#">Forum</a></li>
-                <li><a href="#">Join Us</a></li>
-           </nav>
-   </header>
-   <main>
-       <div class="sec">
-        <h6>Trending</h6>
-       <h1>No To Drama Unless It's Korean</h1>
-        <div class="buttontab">
-            <div>Kpop</div>
-        </div>
-        <div class="buttontab">
-        <div>Kdramas</div>
-         </div>
-        <div class="buttontab"> 
-        <div>Kmovies</div>
-        </div>
-        &nbsp;
-    </div> 
-    <div class="banner btn">
-     <h6>Thriller</h6>
-        <h2>Mr. Robot</h2>
-        <p>Mr. Robot is a gifted but misunderstood teenager who enjoy hacking into computers but never to harm anyone. When a mysterious girl asks him for help, his life began to change.</p>
-        <div class="btext"><a href="#"> Watch Now <i class="fas fa-play-circle"></i></a></div>
-        </div>   
-    </div>
-    <div class="leftside">
-        <div class="blocktitle"">Choose Your server</div>
-        <div class="server">
-            <a class="serverbtn" href="#">Server1</a>
-            <a class="serverbtn" href="#">Xserver</a>
-            <a class="serverbtn" href="#">ituserver</a>
-            <a class="serverbtn" href="#">123server</a>
-            <a class="serverbtn" href="#">Oreo Server</a>
-        </div>
-        <br>
-        <div class="blocktitle">
-            <h3>Recent Updates</h3>
-        </div>
-        <center><iframe width="70%" height="260px" src="https://www.youtube.com/embed/GqnQs5ybyq8"></iframe></center>
-        <br>
-        <div class="server">
-            <a class="serverbtn" href="#">Episode 1</a>
-            <a class="serverbtn" href="#">Episode 2</a>
-            <a class="serverbtn" href="#">Episode 3</a>
-            <a class="serverbtn" href="#">Episode 4</a>
-            <a class="serverbtn" href="#">Episode 5</a>
-            <a class="serverbtn" href="#">Episode 6</a>
-            <a class="serverbtn" href="#">Episode 7</a>
-            <a class="serverbtn" href="#">Episode 8</a>
-        </div>
-    </div>
-</div>
-    </div>
-    <div class="rightside space">
-            <div class="block" id="chart">
-                <div class="blocktitle">
-                    <h3>Recommendations</h3>
-                </div>
-                <div class="topx">
-                    <div class="tabs" data-target="#topview">
-                        <div class="tab active" data-name="topviewday">
-                            Day
-                        </div>
-                        <div class="tab" data-name="topviewweek">
-                            Weekly
-                        </div>
-                        <div class="tab" data-name="topviewmonth">
-                            Month
-                        </div>
-                    </div>
-                    <div class="blockbody blockrow list_02 topviewday">
-                        <ul>
-                            <li><span class="st top">1</span>
-                            <div class="detail">
-                                <div class="name">
-                                    <a href="/drama/true-beauty.9103.html" title="True Beauty 2020">True Beauty</a>
-                                </div>
-                                <div class="views">
-                                     Recommend
-                                </div>
-                            </div>
-                            </li><li><span class="st top">2</span>
-                            <div class="detail">
-                                <div class="name">
-                                    <a href="/drama/mr-queen.9134.html" title="Mr. Queen 2020">Mr. Queen</a>
-                                </div>
-                                <div class="views">
-                                     Recommend
-                                </div>
-                            </div>
-                            </li><li><span class="st top">3</span>
-                            <div class="detail">
-                                <div class="name">
-                                    <a href="/drama/running-man.995.html" title="Running Man 2010">Running Man</a>
-                                </div>
-                                <div class="views">
-                                     Recommend
-                                </div>
-                            </div>
-                            </li><li><span class="st top">4</span>
-                            <div class="detail">
-                                <div class="name">
-                                    <a href="/drama/legend-of-fei.9195.html" title="Legend of Fei 2020">Legend of Fei</a>
-                                </div>
-                                <div class="views">
-                                     Recommend
-                                </div>
-                            </div>
-                            </li><li><span class="st top">5</span>
-                            <div class="detail">
-                                <div class="name">
-                                    <a href="/drama/penthouse-war-in-life.8737.html" title="Penthouse: War In Life 2020">Penthouse: War In Life</a>
-                                </div>
-                                <div class="views">
-                                     Recommend
-                                </div>
-                            </div>
-                            </li><li><span class="st top">6</span>
-                            <div class="detail">
-                                <div class="name">
-                                    <a href="/drama/lovestruck-in-the-city.9261.html" title="Lovestruck in the City 2020">Lovestruck in the City</a>
-                                </div>
-                                <div class="views">
-                                     Recommend
-                                </div>
-                            </div>
-                            </li><li><span class="st top">7</span>
-                            <div class="detail">
-                                <div class="name">
-                                    <a href="/drama/royal-secret-inspector.9260.html" title="Royal Secret Inspector 2020">Royal Secret Inspector</a>
-                                </div>
-                                <div class="views">
-                                     Recommend
-                                </div>
-                            </div>
-                            </li><li><span class="st top">8</span>
-                            <div class="detail">
-                                <div class="name">
-                                    <a href="/drama/awaken.9033.html" title="Awaken 2020">Awaken</a>
-                                </div>
-                                <div class="views">
-                                     Recommend
-                                </div>
-                            </div>
-                            </li><li><span class="st top">9</span>
-                            <div class="detail">
-                                <div class="name">
-                                    <a href="/drama/live-on.8939.html" title="Live On 2020">Live On</a>
-                                </div>
-                                <div class="views">
-                                     Recommend
-                                </div>
-                            </div>
-                            </li><li><span class="st top">10</span>
-                            <div class="detail">
-                                <div class="name">
-                                    <a href="/drama/be-with-you-2020.8963.html" title="Be With You (2020) 2020">Be With You (2020)</a>
-                                </div>
-                                <div class="views">
-                                    0 Recommend
-                                </div>
-                            </div>
-                            </li>	
-                        </ul>
-                    </div>
+<body>
+  <a class="skip" href="#grid">Skip to the list</a>
 
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="./">
+        <svg width="28" height="28" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="currentColor"/><path d="M24 18v28l22-14z" fill="var(--bg)"/></svg>
+        <span>K-Drama Catalog</span>
+      </a>
+      <nav class="tabs" aria-label="Views">
+        <button type="button" data-view="all">Browse</button>
+        <button type="button" data-view="watchlist">Watchlist <span id="watch-count" class="badge">0</span></button>
+      </nav>
+      <button type="button" id="theme-toggle" class="icon-button" aria-label="Switch light or dark theme">◐</button>
     </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>No drama unless it's Korean.</h1>
+      <p>Search the catalog, filter by genre, save titles to your watchlist and rate what you have watched. Everything is saved in your browser.</p>
+    </section>
+
+    <section class="controls" aria-label="Search and filters">
+      <div class="search-row">
+        <label class="search">
+          <span class="visually-hidden">Search titles</span>
+          <input id="search" type="search" placeholder="Search title, genre or country" autocomplete="off">
+        </label>
+        <label class="sort">
+          <span>Sort</span>
+          <select id="sort">
+            <option value="title">Title A–Z</option>
+            <option value="newest">Newest first</option>
+            <option value="oldest">Oldest first</option>
+          </select>
+        </label>
+      </div>
+      <div id="genre-chips" class="chip-list" role="group" aria-label="Filter by genre"></div>
+      <p id="result-count" class="count" aria-live="polite"></p>
+    </section>
+
+    <ul id="grid" class="grid"></ul>
+
+    <div id="empty" class="empty" hidden>
+      <p>No titles match your search.</p>
+      <button type="button" id="clear-filters" class="button">Clear filters</button>
     </div>
-    </div>
-    <div class="scroltotop">
-        <a href="blog.html">Go To Top</a>
-    </div>
-   </main>
-   <footer class="footer">
-           <div class="row">
-               <div class="col">
-                   <h3>Genre</h3>
-                   <ul>
-                       <li>Romance</li>
-                       <li>Thriller</li>
-                       <li>Humour</li>
-                       <li>Horror</li>
-                       <li>Supernatural</li>
-                   </ul>
-               </div>
-               <div class="col">
-                <h3>Our partner</h3>
-                <ul>
-                    <li>Drama3s</li>
-                    <li>Overdrama</li>
-                    <li>Crazy@drama</li>
-                    <li>Kissasian</li>
-                    <ki>Watchdrama</ki>
-                </ul>
-            </div>
-            <div class="col">
-                <h3>Follow Us</h3>
-                <ul>
-                    <a href="#"><i class="fa fa-facebook-official"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fab twitter"></i></a>
-                </ul>
-            </div>
-           </div>
-           <div class="buttomfooter">
-               <p>@2021 All rights reserved. Developed by: <abbr title="Nerd">Criti Mandal</abbr></p>
-           </div>
-   </footer>
+  </main>
+
+  <dialog id="detail" aria-labelledby="detail-title">
+    <form method="dialog">
+      <button class="close icon-button" aria-label="Close">✕</button>
+    </form>
+    <div id="detail-body" class="detail"></div>
+  </dialog>
+
+  <footer class="footer wrap">
+    <p>A fan-made practice project. Descriptions are short summaries written for this demo. Not affiliated with any broadcaster.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/logic.js"></script>
+  <script src="js/app.js"></script>
 </body>
-<script type="text/javascript" src="CSS/main.js"></script>
-<script type="text/javascript" src="CSS/kpop.js"></script>
-<script type="text/javascript">
-alert('A demo site')
-</script>
 </html>
